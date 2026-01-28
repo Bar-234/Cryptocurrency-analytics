@@ -6,7 +6,7 @@ crypto-markets23.csv
 - *Records:* 20, 000 +
 - *Date Range:* April 2013- May 2013
 - *Cryptocurrency:*  Bitcoin (BTC) 
-- *File Size:* 2.5 MB
+- *File Size:* 29 MB
 
 # Data Dictionary
 - *Slug* : string, Cryptocurrency identifier
