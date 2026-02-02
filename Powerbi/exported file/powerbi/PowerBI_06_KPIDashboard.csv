@@ -1,0 +1,16 @@
+Metric,Value
+current_price,427885.0
+avg_price,165336.319294809
+max_price,996557.0
+Min_Price,100.0
+Volatility,247791.4467170315
+avg_volume,1450145056.1718903
+Market_cap,74451016927.0
+Total_Records,1953
+Forecast_7D ,377273.80765428906
+Forecast_14D,340093.1846286816
+Forecast_30D,255108.90342735295
+Expected_Change_%,-40.37909638632975
+Best_Model,Linear Regression
+Best_Model_R2,0.45174563985337857
+Analysis_Date,2026-01-21
