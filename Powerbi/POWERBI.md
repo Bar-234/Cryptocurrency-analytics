@@ -1,8 +1,8 @@
 #  *POWER BI*
 
-*Platform* : Microsoft Power BI Desktop
+**Platform** : Microsoft Power BI Desktop
 
-*Data Sources*
+**Data Sources**
 - PowerBI_01_TopCryptocurrencies
 - PowerBI_02_BitcoinComplete
 - PowerBI_03_ModelPredictions
