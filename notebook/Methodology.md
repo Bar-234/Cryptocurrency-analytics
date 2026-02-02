@@ -28,7 +28,7 @@ predict Bitcoin prices 30 day ahead with:
 ## Data Cleaning
 
 In Excel
-*steps Performed*
+**steps Performed**
 1. Removed duplicates:  0 found
 2. Handled Missing Values: 0 found (100% complete)
 3. Data Parsing : convert to datetime
@@ -37,7 +37,7 @@ In Excel
 
 # Exploratory Data Analysis
 
-*Key findings:*
+**Key findings:**
 - strong upward trend in Bitcoin Price
 - High Volatility
 - Volume correlates with price movements
@@ -46,7 +46,7 @@ In Excel
 # Feature Engineering
 
 ## Technical indicators
-*Moving Averages(Trend)*
+**Moving Averages(Trend)**
 
 MA_7 = close.rolling(window=7).mean()
 MA_30 = close.rolling(window=30).mean()
@@ -54,26 +54,26 @@ MA_90 = close.rolling(window=90).mean()
 
 Rationale : Capture short, medium, long-term trends
 
-*Exponential Moving Averages(Recent emphasis)*
+**Exponential Moving Averages(Recent emphasis)**
 EMA_12 = close.ewm(span=12, adjust= False).mean()
 EMA_26 = close.ewm(span=26, adjust= False).mean()
 
 Rationale : Weight recent price move heavily
 
-*volatility Indicators*
+**volatility Indicators**
 volatility = close.rolling(window = 30).std()
 price_range = high - low
 
 Rationale : Measure market uncertainty
 
-*lag Features (Autocorrelation)*
+**lag Features (Autocorrelation)**
 lag_1 = close.shift(1) #Yesterday
 lag_7 = close.shift(7) #Last Week
 lag_30= close.shift(30) #Last Month
 
 Rationale : Capture temporal dependencies
 
-*Date Features(Cyclical patterns)*
+**Date Features(Cyclical patterns)**
 day, month, year, day_of_week , quater
 Rationale : Detect calender effect
 
@@ -87,8 +87,8 @@ Rationale : Detect calender effect
 # Model Developement
 
 ## Train-Test split
-- *Split ratio :* 80% train , 20% test
-- *Method :* Time-based(not random)
+- **Split ratio :** 80% train , 20% test
+- **Method :** Time-based(not random)
 - *Rationale :* Prevent lookhead bias in time series
 
 ### Feature Scaling
@@ -100,44 +100,44 @@ MinMaxScaler(feature_range=(0,1))
 
 #### Models Implemented
 
-*Model1 : Linear Regression(Baseline)*
--*purpose* : Established baseline performance
--*Assumption* : Linear relationships
--*Pros* : Fast , interpretable
--*Cons* : cannot capture non-linearity
+**Model1 : Linear Regression(Baseline)**
+- **purpose** : Established baseline performance
+- **Assumption** : Linear relationships
+- **Pros** : Fast , interpretable
+- **Cons** : cannot capture non-linearity
 
-*Model2 : Random Forest*
--*Purpose* : Capture non-linear patterns
--*Approach* : Ensemble of decision trees
--*Pros* : Handles non-linearity , feature importance
--*Cons* : Slower, less intrpretable
+**Model2 : Random Forest**
+- **Purpose** : Capture non-linear patterns
+- **Approach** : Ensemble of decision trees
+- **Pros** : Handles non-linearity , feature importance
+- **Cons** : Slower, less intrpretable
 
-*Model3 : Gradient Boosting*
--*Purpose* : Sequential error correction
--*Approach* : Builds trees to correct previous errors
--*Pros* : High accuracy , handles complex patterns
--*cons* : Prone to overfitting
+**Model3 : Gradient Boosting**
+- **Purpose** : Sequential error correction
+- **Approach** : Builds trees to correct previous errors
+- **Pros** : High accuracy , handles complex patterns
+- **cons** : Prone to overfitting
 
-*Model4 : ARIMA* 
+**Model4 : ARIMA** 
 ARIMA(order=(5,1,0))
 
--*Purpose* : Time series specific modeling
--*Approach* : Autoregressive integrated moving average
--*Pros* : Captures temporal autocorrelation
--*cons* : Assumes stationarity
+- **Purpose** : Time series specific modeling
+- **Approach** : Autoregressive integrated moving average
+- **Pros** : Captures temporal autocorrelation
+- **cons** : Assumes stationarity
 
 # Evaluation Metrics
 
-*R2 Score(Variance Explained)*
+**R2 Score(Variance Explained)**
 interpretation : 95% R2 = Model explains 95% of price variance
 
-*RMSE(Root Mean Squared Error)*
+**RMSE(Root Mean Squared Error)**
 interpretation : average prediction error in dollar
 
-*MAE(Mean Absolute Error)*
+**MAE(Mean Absolute Error)**
 interpretation : Average absolute prediction error
 
-*MAPE(Mean absolute Percentage Error)*
+**MAPE(Mean absolute Percentage Error)**
 interpretation : Average Percentage error
 
 # Model Selection
@@ -190,18 +190,18 @@ Random Forest selected based on :
 
 # Validation
 
-*Backtesting*
+**Backtesting**
 - prediction on unseen test set (20% of data)
 - no data leakage from training set
 - True out-of-sample evaluation
 
-*Cross-Validation*
+**Cross-Validation**
 5-fold time series cross-validation
 -Validates model stability
 -Prevent overfitting
 -Confirms consisent performance
 
-*Residual Analysis*
+**Residual Analysis**
 - Residual approximately normal
 - No systematic bias
 - Homoscedastic(constant variance)
@@ -238,8 +238,7 @@ Random Forest selected based on :
 - Risk management tools
 - alert system for anomalies
 
-Last Updated : January 2026
-Author : Barkha Rani
+
 
 
 
