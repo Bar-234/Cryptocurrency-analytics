@@ -1,4 +1,4 @@
-#  *POWER BI*
+#  **POWER BI**
 
 **Platform** : Microsoft Power BI Desktop
 
@@ -11,9 +11,9 @@
 - PowerBI_06_KPIDashboard
 - PowerBI_07_MonthlyAnalysis
 
-. **DAX Measures** : 12 customs calculations
-. **Visualizations** : 20+ interactive charts
-. **Page** : 4 comprehensive dashboard
+- **DAX Measures** : 12 customs calculations
+- **Visualizations** : 20+ interactive charts
+- **Page** : 4 comprehensive dashboard
 
 # *Dashboard Structure*
 
