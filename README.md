@@ -71,7 +71,7 @@ Cryptocurrency-analytics/
 |-Visualization/
 |-powerbi/
 |   |-cryptocurrencies.pbix   #power Bi
-|   |-Powerbi.csv   # Exported datasets
+|   |-exported file.csv   # Exported datasets
 |   |-POWERBI.md
 |   |-screenshot
 | -Results/
