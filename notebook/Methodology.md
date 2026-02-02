@@ -89,7 +89,7 @@ Rationale : Detect calender effect
 ## Train-Test split
 - **Split ratio :** 80% train , 20% test
 - **Method :** Time-based(not random)
-- *Rationale :* Prevent lookhead bias in time series
+- **Rationale :** Prevent lookhead bias in time series
 
 ### Feature Scaling
 MinMaxScaler(feature_range=(0,1))
