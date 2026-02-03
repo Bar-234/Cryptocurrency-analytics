@@ -73,7 +73,7 @@ Cryptocurrency-analytics/
 |   |-cryptocurrencies.pbix   #power Bi
 |   |-exported file.csv   # Exported datasets
 |   |-POWERBI.md
-|   |-screenshot
+|   |-images
 | -Results/
 
 # Power BI Dashboard
