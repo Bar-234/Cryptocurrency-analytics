@@ -15,7 +15,7 @@
 - **Visualizations** : 20+ interactive charts
 - **Page** : 4 comprehensive dashboard
 
-# *Dashboard Structure*
+# **Dashboard Structure**
 
 **PAGE 1- Executive Summary(KPI And Overview)**
 - current price card
