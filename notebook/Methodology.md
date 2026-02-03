@@ -48,28 +48,28 @@ In Excel
 ## Technical indicators
 **Moving Averages(Trend)**
 
-MA_7 = close.rolling(window=7).mean()
-MA_30 = close.rolling(window=30).mean()
-MA_90 = close.rolling(window=90).mean()
+- MA_7 = close.rolling(window=7).mean()
+- MA_30 = close.rolling(window=30).mean()
+- MA_90 = close.rolling(window=90).mean()
 
 Rationale : Capture short, medium, long-term trends
 
 **Exponential Moving Averages(Recent emphasis)**
-EMA_12 = close.ewm(span=12, adjust= False).mean()
-EMA_26 = close.ewm(span=26, adjust= False).mean()
+- EMA_12 = close.ewm(span=12, adjust= False).mean()
+- EMA_26 = close.ewm(span=26, adjust= False).mean()
 
 Rationale : Weight recent price move heavily
 
 **volatility Indicators**
-volatility = close.rolling(window = 30).std()
-price_range = high - low
+- volatility = close.rolling(window = 30).std()
+- price_range = high - low
 
 Rationale : Measure market uncertainty
 
 **lag Features (Autocorrelation)**
-lag_1 = close.shift(1) #Yesterday
-lag_7 = close.shift(7) #Last Week
-lag_30= close.shift(30) #Last Month
+- lag_1 = close.shift(1) #Yesterday
+- lag_7 = close.shift(7) #Last Week
+- lag_30= close.shift(30) #Last Month
 
 Rationale : Capture temporal dependencies
 
@@ -145,31 +145,31 @@ interpretation : Average Percentage error
 ## performance Comparison
 
 Linear Regression
-r2 score (train) : 0.8827
-r2 score(test) : 0.4517
-RMSE : $216,972.35
-MAE: $144,057.70
-MAPE : 158.07%
+- r2 score (train) : 0.8827
+- r2 score(test) : 0.4517
+- RMSE : $216,972.35
+- MAE: $144,057.70
+- MAPE : 158.07%
 
 Random Forest
-r2 score (train) : 0.9756
-r2 score(test) : 0.1011
-RMSE : $277,828.01
-MAE: $222,380.60
-MAPE : 140.91%
+- r2 score (train) : 0.9756
+- r2 score(test) : 0.1011
+- RMSE : $277,828.01
+- MAE: $222,380.60
+- MAPE : 140.91%
 
 Gradient Boosting
-r2 score (train) : 0.9992
-r2 score(test) : -0.4561
-RMSE : $353,593.12
-MAE: $292,423.44
-MAPE : 142.
+- r2 score (train) : 0.9992
+- r2 score(test) : -0.4561
+- RMSE : $353,593.12
+- MAE: $292,423.44
+- MAPE : 142.
 
 ARIMA Model
-R2 score : -0.1872
-RMSE : $319,279.38
-MAE : $301,128.45
-MAPE : 210.26%
+- R2 score : -0.1872
+- RMSE : $319,279.38
+- MAE : $301,128.45
+- MAPE : 210.26%
 
 ## Selection Criteria
 Random Forest selected based on :
@@ -197,9 +197,9 @@ Random Forest selected based on :
 
 **Cross-Validation**
 5-fold time series cross-validation
--Validates model stability
--Prevent overfitting
--Confirms consisent performance
+- Validates model stability
+- Prevent overfitting
+- Confirms consisent performance
 
 **Residual Analysis**
 - Residual approximately normal
